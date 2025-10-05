@@ -298,19 +298,19 @@ export default function ContactSection() {
                 <div className="space-y-4 text-gray-300">
                   <div className="flex items-center gap-3">
                     <span className="text-cyan-400">📧</span>
-                    <span>suraj.kumar@email.com</span>
+                    <span>sk7260023724@email.com</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-violet-400">📱</span>
-                    <span>+91 98765 43210</span>
+                    <span>+91 7488628957</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-magenta-400">🌏</span>
-                    <span>Available worldwide (Remote)</span>
+                    <span>Kolkata</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-cyan-400">⏰</span>
-                    <span>Response time: 2-4 hours</span>
+                    <span>Response time: 1-2 Days</span>
                   </div>
                 </div>
               </div>
@@ -372,7 +372,7 @@ export default function ContactSection() {
                 ⚡
               </motion.div>
               <p className="text-gray-300 text-sm">
-                I typically respond within 2-4 hours during business days
+                I typically respond within 1-2 Days during business days
               </p>
             </motion.div>
           </motion.div>

@@ -1,12 +1,14 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Link } from 'react-router-dom';
 
 export default function ProjectSection() {
   const projects = [
     {
       id: 4,
+      slug: 'ux-case-study',
       title: "UX Case Study",
       category: "User Research",
       description: "Comprehensive UX research and design process documentation",
@@ -17,6 +19,7 @@ export default function ProjectSection() {
     },
     {
       id: 2,
+      slug: 'brand-identity',
       title: "Brand Identity",
       category: "Logo Design",
       description: "Complete branding package with logo design and visual identity system",
@@ -37,6 +40,7 @@ export default function ProjectSection() {
     },
     {
       id: 1,
+      slug: 'mobile-app',
       title: "Mobile App UI",
       category: "UI/UX Design",
       description: "Modern mobile app interface with intuitive navigation and clean aesthetics",
@@ -93,7 +97,8 @@ export default function ProjectSection() {
               viewport={{ once: true }}
               className={`${index === 0 ? 'lg:col-span-2 lg:row-span-2' : index === 3 ? 'lg:col-span-2' : ''}`}
             >
-              <Card className="group relative overflow-hidden backdrop-blur-md bg-white/5 border border-white/10 hover:border-cyan-400/30 transition-all duration-700 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:scale-[1.02] h-full cursor-pointer">
+              <Link to={`/project/${project.slug}`} className="block h-full">
+                <Card className="group relative overflow-hidden backdrop-blur-md bg-white/5 border border-white/10 hover:border-cyan-400/30 transition-all duration-700 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:scale-[1.02] h-full">
                 {/* Background gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
                 
@@ -103,13 +108,11 @@ export default function ProjectSection() {
                     src={project.image}
                     alt={project.title}
                     className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
-                      index === 0 ? 'h-80' : 'h-48'
+                      index === 0 ? 'h-[720px]' : 'h-48'
                     }`}
                   />
-                  
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
                   {/* Hover content */}
                   <motion.div 
                     className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -171,35 +174,11 @@ export default function ProjectSection() {
                 {/* Glowing border effect */}
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-400/0 via-violet-400/0 to-magenta-400/0 group-hover:from-cyan-400/20 group-hover:via-violet-400/20 group-hover:to-magenta-400/20 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
               </Card>
-            </motion.div>
-          ))}
-        </div>
+            </Link>
+          </motion.div>
+        ))}
+      </div>
 
-        {/* View All Projects Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <motion.button
-            className="group relative overflow-hidden backdrop-blur-md bg-white/5 hover:bg-white/10 text-white border border-white/20 hover:border-gradient-to-r hover:from-cyan-400/50 hover:to-violet-400/50 px-8 py-4 rounded-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/25"
-            whileHover={{ y: -5 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              View All Projects
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                →
-              </motion.span>
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   );

@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import ProjectSection from "./components/ProjectSection";
+import ProjectDetails from "./components/ProjectDetails";
 import BookingSection from "./components/BookingSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
@@ -22,7 +24,8 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0B0B0B] overflow-x-hidden relative">
+    <Router>
+      <div className="min-h-screen bg-[#0B0B0B] overflow-x-hidden relative">
       {/* Global CSS overrides */}
       <style>
         {`
@@ -63,16 +66,20 @@ export default function App() {
       <ScrollingSphere />
 
       {/* Main content */}
-      <main className="relative z-10">
-        <HeroSection />
-        <AboutSection />
-        <ProjectSection />
-        <BookingSection />
-        <ContactSection />
-      </main>
-
-      {/* Footer */}
-      <Footer className="relative z-10" />
+      <Routes>
+        <Route path="/" element={
+          <main className="relative z-10">
+            <HeroSection />
+            <AboutSection />
+            <ProjectSection />
+            <BookingSection />
+            <ContactSection />
+            <Footer className="relative z-10" />
+          </main>
+        } />
+        <Route path="/project/:projectId" element={<ProjectDetails />} />
+      </Routes>
     </div>
+    </Router>
   );
 }

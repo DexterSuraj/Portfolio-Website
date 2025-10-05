@@ -140,19 +140,19 @@ export default function Footer({ className = "" }: FooterProps) {
             </h4>
             <div className="space-y-3">
               <motion.a
-                href="mailto:suraj.kumar@email.com"
+                href="mailto:sk7260023724@email.com"
                 className="flex items-center gap-3 text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                 whileHover={{ x: 5 }}
               >
                 <span className="text-cyan-400">📧</span>
-                suraj.kumar@email.com
+                sk7260023724@email.com
               </motion.a>
               <motion.div
                 className="flex items-center gap-3 text-gray-400 text-sm"
                 whileHover={{ x: 5 }}
               >
                 <span className="text-violet-400">📱</span>
-                +91 98765 43210
+                +91 7488628957
               </motion.div>
               <motion.div
                 className="flex items-center gap-3 text-gray-400 text-sm"

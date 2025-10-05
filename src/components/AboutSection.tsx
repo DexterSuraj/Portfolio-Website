@@ -7,31 +7,30 @@ export default function AboutSection() {
     'Sketch', 'After Effects', 'Principle', 'InVision', 'Webflow', 'Typography'
   ];
 
-  const journeyItems = [
+  const journeyItems = [{
+    year: '2021 (October)', 
+      title: 'Started My Graduation(BCA)', 
+      desc: 'Self-taught basics through online courses and design challenges',
+      details: 'Discovered my passion for design while exploring creative tools like Photoshop and Illustrator. Started with logo design and basic graphics.'
+  },
     { 
-      year: '2018', 
+      year: '2024 (July)', 
       title: 'Started Design Journey', 
       desc: 'Self-taught basics through online courses and design challenges',
       details: 'Discovered my passion for design while exploring creative tools like Photoshop and Illustrator. Started with logo design and basic graphics.'
     },
     { 
-      year: '2020', 
-      title: 'First Freelance Projects', 
-      desc: 'Logo design, branding, and web interfaces',
+      year: '2024 (December)', 
+      title: 'Joined First MNC', 
+      desc: 'I Joined TCS and Learned Coding and Designing.',
       details: 'Began taking on client projects, focusing on brand identity and simple website designs. Learned the importance of client communication and project management.'
     },
     { 
-      year: '2022', 
-      title: 'UX/UI Specialization', 
+      year: '2025 (Present)', 
+      title: 'Crafting Seanmless Experience', 
       desc: 'Advanced user research, prototyping, and design systems',
       details: 'Deepened my understanding of user-centered design principles. Mastered tools like Figma and started creating comprehensive design systems and interactive prototypes.'
     },
-    { 
-      year: '2024', 
-      title: 'Full-Stack Designer', 
-      desc: 'Design + Development expertise with modern frameworks',
-      details: 'Expanded into front-end development with React and modern web technologies. Now able to bridge the gap between design and implementation seamlessly.'
-    }
   ];
 
   return (
