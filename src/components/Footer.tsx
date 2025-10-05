@@ -1,38 +1,31 @@
-import { motion } from 'motion/react';
+import { motion } from "framer-motion";
+import React from "react";
 
-export default function Footer() {
+interface FooterProps {
+  className?: string;
+}
+
+export default function Footer({ className = "" }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-gradient-to-t from-[#0B0B0B] to-[#121212] py-16 px-6 overflow-hidden">
+    <footer
+      className={`relative bg-gradient-to-t from-[#0B0B0B] to-[#121212] py-16 px-6 overflow-hidden ${className}`}
+    >
       {/* Gradient divider */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent" />
-      
+
       {/* Background effects */}
       <div className="absolute inset-0">
         <motion.div
           className="absolute top-10 left-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/5 to-violet-500/5 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 180, 360],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+          animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-10 right-1/4 w-48 h-48 bg-gradient-to-l from-magenta-500/5 to-cyan-500/5 rounded-full blur-2xl"
-          animate={{
-            scale: [1.2, 0.8, 1.2],
-            rotate: [360, 180, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+          className="absolute bottom-10 right-1/4 w-48 h-48 bg-gradient-to-l from-fuchsia-500/5 to-cyan-500/5 rounded-full blur-2xl"
+          animate={{ scale: [1.2, 0.8, 1.2], rotate: [360, 180, 0] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
 
@@ -45,16 +38,16 @@ export default function Footer() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <motion.blockquote 
-            className="text-2xl md:text-3xl font-medium text-transparent bg-gradient-to-r from-cyan-200 via-violet-200 to-magenta-200 bg-clip-text mb-4"
-            style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+          <motion.blockquote
+            className="text-2xl md:text-3xl font-medium text-transparent bg-gradient-to-r from-cyan-200 via-violet-200 to-fuchsia-200 bg-clip-text mb-4"
+            style={{ fontFamily: "Space Grotesk, sans-serif" }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
             "Design is the art of empathy made visible."
           </motion.blockquote>
-          <motion.p 
+          <motion.p
             className="text-gray-400 text-lg"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -72,18 +65,18 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="md:col-span-1"
           >
-            <motion.h3 
+            <motion.h3
               className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent mb-4"
-              style={{ fontFamily: 'Space Grotesk, sans-serif' }}
+              style={{ fontFamily: "Space Grotesk, sans-serif" }}
               whileHover={{ scale: 1.05 }}
             >
               Suraj Kumar
             </motion.h3>
             <p className="text-gray-400 leading-relaxed mb-4">
-              UX/UI Designer crafting digital experiences that inspire and connect. 
-              Based in India, working globally with passionate teams and creative minds.
+              UX/UI Designer crafting digital experiences that inspire and
+              connect. Based in India, working globally with passionate teams
+              and creative minds.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-500">
               <motion.span
@@ -102,15 +95,16 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="md:col-span-1"
           >
-            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
               {[
-                { name: 'About', href: '#about' },
-                { name: 'Projects', href: '#projects' },
-                { name: 'Book a Call', href: '#booking' },
-                { name: 'Contact', href: '#contact' }
+                { name: "About", href: "#about" },
+                { name: "Projects", href: "#projects" },
+                { name: "Book a Call", href: "#booking" },
+                { name: "Contact", href: "#contact" },
               ].map((link, index) => (
                 <motion.li key={link.name}>
                   <motion.a
@@ -122,7 +116,9 @@ export default function Footer() {
                     transition={{ duration: 0.4, delay: 0.1 * index }}
                     onClick={(e) => {
                       e.preventDefault();
-                      document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                      document
+                        .querySelector(link.href)
+                        ?.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
                     {link.name}
@@ -138,9 +134,10 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="md:col-span-1"
           >
-            <h4 className="text-lg font-semibold text-white mb-4">Let's Connect</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Let's Connect
+            </h4>
             <div className="space-y-3">
               <motion.a
                 href="mailto:suraj.kumar@email.com"
@@ -161,7 +158,7 @@ export default function Footer() {
                 className="flex items-center gap-3 text-gray-400 text-sm"
                 whileHover={{ x: 5 }}
               >
-                <span className="text-magenta-400">🌍</span>
+                <span className="text-fuchsia-400">🌍</span>
                 Remote • Worldwide
               </motion.div>
             </div>
@@ -169,10 +166,10 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex gap-3 mt-6">
               {[
-                { icon: '💼', color: 'hover:text-blue-400' },
-                { icon: '🏀', color: 'hover:text-pink-400' },
-                { icon: '🎨', color: 'hover:text-purple-400' },
-                { icon: '📸', color: 'hover:text-yellow-400' }
+                { icon: "💼", color: "hover:text-blue-400" },
+                { icon: "🏀", color: "hover:text-pink-400" },
+                { icon: "🎨", color: "hover:text-purple-400" },
+                { icon: "📸", color: "hover:text-yellow-400" },
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -203,7 +200,7 @@ export default function Footer() {
             <p className="text-gray-500 text-sm">
               © {currentYear} Suraj Kumar. All rights reserved.
             </p>
-            
+
             <div className="flex items-center gap-6 text-sm text-gray-500">
               <motion.a
                 href="#"
@@ -224,19 +221,19 @@ export default function Footer() {
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-green-400 rounded-full" />
                 <span>Available for work</span>
               </motion.div>
             </div>
           </div>
         </motion.div>
 
-        {/* Floating back to top */}
+        {/* Floating Back to Top */}
         <motion.button
           className="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-violet-500 flex items-center justify-center text-white shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 z-50"
           whileHover={{ scale: 1.1, rotate: 360 }}
           whileTap={{ scale: 0.9 }}
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
