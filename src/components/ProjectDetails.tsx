@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+import freshFoldImg from "../assets/FreshFold.jpg"
 
 // Project data
 const projectsData = {
@@ -27,7 +29,7 @@ const projectsData = {
       '60% improvement in task completion time',
       'Positive user feedback and satisfaction scores'
     ],
-    imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fstock-photos%2Fnature-and-landscapes&psig=AOvVaw1Pm9T0sZUnfgZYVDkNWcHw&ust=1759946417408000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIC99LnVkpADFQAAAAAdAAAAABAE',
+    imageUrl: freshFoldImg,
   },
   'brand-identity': {
     title: 'Brand Identity Project',
@@ -85,6 +87,7 @@ const projectsData = {
 
 export default function ProjectDetails() {
   const { projectId } = useParams();
+  const navigate = useNavigate();
   const project = projectsData[projectId as keyof typeof projectsData];
 
   if (!project) {
@@ -103,6 +106,18 @@ export default function ProjectDetails() {
         transition={{ duration: 0.5 }}
         className="max-w-6xl mx-auto"
       >
+        {/* Back Button */}
+        <motion.button
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.1 }}
+          onClick={() => navigate(-1)}
+          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 group"
+        >
+          <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+          <span>Back</span>
+        </motion.button>
+
         {/* Project Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-violet-200 to-magenta-200 bg-clip-text text-transparent mb-6">
@@ -118,12 +133,12 @@ export default function ProjectDetails() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
-          className="mb-16 rounded-xl overflow-hidden aspect-video bg-black/50 backdrop-blur-sm border border-gray-800"
+          className="mb-16 rounded-xl overflow-hidden bg-black/50 backdrop-blur-sm border border-gray-800 w-fit max-w-full mx-auto"
         >
           <img
             src={project.imageUrl}
             alt={project.title}
-            className="w-full h-full object-cover"
+            className="w-full h-auto object-contain"
           />
         </motion.div>
 
