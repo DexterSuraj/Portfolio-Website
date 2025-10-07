@@ -27,7 +27,7 @@ const projectsData = {
       '60% improvement in task completion time',
       'Positive user feedback and satisfaction scores'
     ],
-    imageUrl: '/path-to-case-study-image.jpg',
+    imageUrl: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fstock-photos%2Fnature-and-landscapes&psig=AOvVaw1Pm9T0sZUnfgZYVDkNWcHw&ust=1759946417408000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIC99LnVkpADFQAAAAAdAAAAABAE',
   },
   'brand-identity': {
     title: 'Brand Identity Project',

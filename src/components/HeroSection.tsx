@@ -89,14 +89,14 @@ export default function HeroSection() {
         </motion.p>
 
         <motion.div 
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-3xl mx-auto w-full px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <Button
             onClick={() => scrollToSection('projects')}
-            className="group relative overflow-hidden bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 text-white px-8 py-4 rounded-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+            className="group relative overflow-hidden bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 text-white px-12 py-6 rounded-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 w-full sm:w-[260px] text-lg font-medium"
           >
             <span className="relative z-10 flex items-center gap-2">
               Explore My Work
@@ -113,7 +113,7 @@ export default function HeroSection() {
 
           <Button
             onClick={() => scrollToSection('booking')}
-            className="group relative overflow-hidden backdrop-blur-md bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-cyan-400/50 px-8 py-4 rounded-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-magenta-500/25"
+            className="group relative overflow-hidden backdrop-blur-md bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-cyan-400/50 px-12 py-6 rounded-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-magenta-500/25 w-full sm:w-[260px] text-lg font-medium"
           >
             <span className="relative z-10 flex items-center gap-2">
               Book a Slot
