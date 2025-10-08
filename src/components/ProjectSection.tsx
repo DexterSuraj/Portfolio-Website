@@ -31,6 +31,7 @@ export default function ProjectSection() {
     {
       id: 3,
       title: "Graphic Posters",
+      slug:"graphics-poster",
       category: "Graphic Design",
       description: "Creative poster designs with bold typography and striking visual elements",
       image: "https://images.unsplash.com/photo-1664574969189-a618ab253940?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFwaGljJTIwZGVzaWduJTIwcG9zdGVyJTIwY29sb3JmdWx8ZW58MXx8fHwxNzU5NjE2NjM1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",

@@ -88,14 +88,14 @@ export default function AboutSection() {
                     <h3 className="text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
                       Suraj Kumar
                     </h3>
-                    <p className="text-cyan-400 text-lg">UX/UI Designer & Creative Technologist</p>
+                    <p className="text-cyan-400 text-lg">UX/UI Designer & Logo Designer</p>
                   </div>
                 </div>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                  With over 5 years of experience in digital design, I specialize in creating user-centered experiences that bridge the gap between beautiful aesthetics and functional design. My passion lies in understanding user behavior and translating complex problems into elegant, intuitive solutions.
+                  With 1.5 years of experience in digital design, I specialize in creating user-centered experiences that bridge the gap between beautiful aesthetics and functional design. My passion lies in understanding user behavior and translating complex problems into elegant, intuitive solutions.
                 </p>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  When I'm not designing, you'll find me exploring photography, sketching urban landscapes, or experimenting with the latest design tools and technologies.
+                  When I'm not designing, you'll find me exploring photography, sketching , or experimenting with the latest design tools and technologies.
                 </p>
               </div>
             </Card>

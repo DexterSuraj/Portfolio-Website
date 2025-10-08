@@ -99,7 +99,7 @@ export default function BookingSection() {
                 </ul>
               </div>
               <div className="mt-auto">
-                <p className="text-xl font-bold text-white mb-4">$150/hour</p>
+                <p className="text-xl font-bold text-white mb-4">$15/hour</p>
                 <Button className="w-full px-8 py-6 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 transition-all duration-300 text-white font-medium tracking-wide hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/25">
                   Book Consultation
                 </Button>
@@ -128,7 +128,7 @@ export default function BookingSection() {
                 </ul>
               </div>
               <div className="mt-auto">
-                <p className="text-xl font-bold text-white mb-4">$200/hour</p>
+                <p className="text-xl font-bold text-white mb-4">$20/hour</p>
                 <Button className="w-full px-8 py-6 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 transition-all duration-300 text-white font-medium tracking-wide hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/25">
                   Book Strategy Session
                 </Button>
@@ -157,7 +157,7 @@ export default function BookingSection() {
                 </ul>
               </div>
               <div className="mt-auto">
-                <p className="text-xl font-bold text-white mb-4">$100/hour</p>
+                <p className="text-xl font-bold text-white mb-4">$10/hour</p>
                 <Button className="w-full px-8 py-6 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 transition-all duration-300 text-white font-medium tracking-wide hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/25">
                   Book Review
                 </Button>
@@ -186,7 +186,7 @@ export default function BookingSection() {
                 </ul>
               </div>
               <div className="mt-auto">
-                <p className="text-xl font-bold text-white mb-4">$180/hour</p>
+                <p className="text-xl font-bold text-white mb-4">$18/hour</p>
                 <Button className="w-full px-8 py-6 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 transition-all duration-300 text-white font-medium tracking-wide hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/25">
                   Book Sprint
                 </Button>
@@ -216,7 +216,7 @@ export default function BookingSection() {
                   </ul>
                 </div>
                 <div className="md:flex-1 flex flex-col justify-center">
-                  <p className="text-xl font-bold text-white mb-6">$500/month</p>
+                  <p className="text-xl font-bold text-white mb-6">$60/month</p>
                   <Button className="w-full px-8 py-6 bg-gradient-to-r from-cyan-500 to-violet-500 hover:from-cyan-400 hover:to-violet-400 transition-all duration-300 text-white font-medium tracking-wide hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/25">
                     Join Mentorship
                   </Button>

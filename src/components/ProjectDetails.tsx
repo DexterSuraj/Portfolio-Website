@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import freshFoldImg from "../assets/FreshFold.jpg"
-
+import freshFoldImg from "../assets/FreshFold.svg"
+import Zrent from "../assets/Zrent.svg"
+import poster from "../assets/Lemonade Design.svg"
+import mobile from "../assets/mobile Ui.svg"
 // Project data
 const projectsData = {
   'ux-case-study': {
@@ -55,8 +57,39 @@ const projectsData = {
       'Consistent brand presence achieved',
       'Client satisfaction rating of 9.5/10'
     ],
-    imageUrl: '/path-to-brand-project-image.jpg',
+    imageUrl: Zrent,
   },
+
+
+'graphics-poster': {
+    title: 'Graphics-Poster Project',
+    description: 'Complete brand transformation and visual identity design',
+    fullDescription: `A strategic brand identity project that involved creating a cohesive visual language and brand 
+    strategy for a growing technology company. The project encompassed everything from logo design to complete brand guidelines.`,
+    tags: ['Branding', 'Visual Design', 'Logo Design', 'Brand Strategy'],
+    challenges: [
+      'Creating a unique visual identity in a crowded market',
+      'Maintaining brand consistency across platforms',
+      'Developing flexible design systems',
+      'Meeting tight project deadlines'
+    ],
+    solutions: [
+      'Developed comprehensive brand guidelines',
+      'Created versatile logo variations',
+      'Designed modular component system',
+      'Implemented brand management tools'
+    ],
+    results: [
+      'Brand recognition increased by 40%',
+      'Marketing efficiency improved by 50%',
+      'Consistent brand presence achieved',
+      'Client satisfaction rating of 9.5/10'
+    ],
+    imageUrl: poster,
+  },
+
+
+
   'mobile-app': {
     title: 'Mobile App Design',
     description: 'User-centered mobile application design and development',
@@ -81,7 +114,7 @@ const projectsData = {
       '30% faster task completion rate',
       'Accessibility score of 98/100'
     ],
-    imageUrl: '/path-to-mobile-app-image.jpg',
+    imageUrl: mobile,
   }
 };
 

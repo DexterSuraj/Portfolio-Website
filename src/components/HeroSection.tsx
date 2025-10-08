@@ -85,7 +85,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          I craft digital experiences — from mobile apps and websites to logos, posters, and photography.
+          I craft digital experiences — from mobile apps and websites to logos, posters, and Banners.
         </motion.p>
 
         <motion.div 
