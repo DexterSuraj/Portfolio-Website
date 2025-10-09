@@ -1,0 +1,109 @@
+:root {
+  --cyan: #06b6d4;
+  --violet: #7c3aed;
+  --magenta: #e11d74;
+}
+
+/* Container for the two buttons */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Base button style */
+.hero-btn {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  width: 100%;
+  transition: all 0.4s ease;
+  text-align: center;
+  min-width: 180px;
+}
+
+/* Primary button */
+.hero-btn.primary {
+  color: white;
+  background: linear-gradient(90deg, var(--cyan), var(--violet));
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.25);
+}
+.hero-btn.primary:hover {
+  background: linear-gradient(90deg, var(--cyan), var(--violet));
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
+}
+
+/* Secondary button (transparent) */
+.hero-btn.secondary {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.hero-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(6, 182, 212, 0.5);
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(225, 29, 116, 0.3);
+}
+
+/* Hover animation glow layers */
+.hero-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  border-radius: inherit;
+  transition: opacity 0.4s ease;
+}
+.hero-btn.primary::after {
+  background: linear-gradient(90deg, rgba(6, 182, 212, 0.3), rgba(124, 58, 237, 0.3));
+}
+.hero-btn.secondary::after {
+  background: linear-gradient(90deg, rgba(225, 29, 116, 0.2), rgba(6, 182, 212, 0.2));
+}
+.hero-btn:hover::after {
+  opacity: 1;
+}
+
+/* Responsive behavior */
+@media (min-width: 768px) {
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 32px;
+    gap: 2rem;
+  }
+  .hero-btn {
+    width: auto;
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-buttons {
+    padding: 0 60px;
+  }
+  .hero-btn {
+    min-width: 220px;
+    font-size: 1.1rem;
+    padding: 16px 36px;
+  }
+}

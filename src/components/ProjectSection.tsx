@@ -8,25 +8,41 @@ export default function ProjectSection() {
   const projects = [
     {
       id: 4,
-      slug: 'ux-case-study',
+      
       title: "UX Case Study",
       category: "User Research",
       description: "Comprehensive UX research and design process documentation",
       image: "https://images.unsplash.com/photo-1674509780304-b51c5e2f9dbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxVWCUyMHJlc2VhcmNoJTIwdXNlciUyMGV4cGVyaWVuY2V8ZW58MXx8fHwxNzU5NjE2NjM1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       tags: ["Research", "Wireframing", "Testing"],
       gradient: "from-cyan-500/20 to-magenta-500/20",
+      caseStudies:[
+       {
+        id:"id234",
+        slug: 'ux-case-study',
+       },
+       {
+        id:"id456",
+        slug:"n/a"
+       }
+      ],
       hoverGradient: "from-cyan-500/30 to-magenta-500/30"
     },
     {
       id: 2,
-      slug: 'brand-identity',
+      
       title: "Brand Identity",
       category: "Logo Design",
       description: "Complete branding package with logo design and visual identity system",
       image: "https://images.unsplash.com/photo-1594926959777-345e30644273?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGxvZ28lMjBkZXNpZ24lMjBicmFuZGluZ3xlbnwxfHx8fDE3NTk2MTY2MzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       tags: ["Illustrator", "Branding", "Typography"],
       gradient: "from-magenta-500/20 to-cyan-500/20",
-      hoverGradient: "from-magenta-500/30 to-cyan-500/30"
+      hoverGradient: "from-magenta-500/30 to-cyan-500/30",
+      caseStudies:[
+       {
+        id:"id234",
+        slug: 'brand-identity',
+       },
+      ]
     },
     {
       id: 3,
@@ -37,7 +53,9 @@ export default function ProjectSection() {
       image: "https://images.unsplash.com/photo-1664574969189-a618ab253940?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFwaGljJTIwZGVzaWduJTIwcG9zdGVyJTIwY29sb3JmdWx8ZW58MXx8fHwxNzU5NjE2NjM1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       tags: ["Photoshop", "Layout", "Print Design"],
       gradient: "from-violet-500/20 to-magenta-500/20",
-      hoverGradient: "from-violet-500/30 to-magenta-500/30"
+      hoverGradient: "from-violet-500/30 to-magenta-500/30",
+      caseStudies:[]
+      
     },
     {
       id: 1,
@@ -48,7 +66,8 @@ export default function ProjectSection() {
       image: "https://images.unsplash.com/photo-1551650992-ee4fd47df41f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzU5NjE2NjM0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       tags: ["Figma", "Prototyping", "User Research"],
       gradient: "from-cyan-500/20 to-violet-500/20",
-      hoverGradient: "from-cyan-500/30 to-violet-500/30"
+      hoverGradient: "from-cyan-500/30 to-violet-500/30",
+      caseStudies:[]
     }
   ];
 

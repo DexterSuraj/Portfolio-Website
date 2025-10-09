@@ -91,7 +91,7 @@ export default function BookingSection() {
                   <span className="text-2xl">💻</span>
                 </motion.div>
                 <h3 className="text-xl font-bold text-white mb-4">UX/UI Design</h3>
-                <p className="text-gray-400 mb-4">1-hour deep dive into your digital product design needs</p>
+                <p className="text-gray-400 mb-4">1-hour deep dive into your digital product.</p>
                 <ul className="text-gray-300 space-y-2 mb-8">
                   <li>• User Interface Analysis</li>
                   <li>• Wireframe Review</li>
